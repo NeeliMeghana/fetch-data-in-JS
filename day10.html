@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+        <body>
+            <p>Iam getting the data from server</p>
+            <p id="user"></p>
+            <button onclick="getData()"></button>"
+            <script>
+            var naveen;
+            fetch("http://localhost:5000/getdata") //link or data
+                  .then(function(n){
+                      console.log("n")
+                      return j.json()
+                  })
+                  .then(function(m){
+                      console.log(m);
+                      neeli=m;
+                      polishetty(naveen);
+                  })
+                  function polishetty(naveen){
+                      console.log("data from internal inside function",naveen)
+                      document.getElementById("user").innerHTML=neeli[0].user
+                      for(var i=0;i<naveen.length;i++){
+                          console.log(naveen[i].user)
+                      }
+                  }
+        </script>
+    </body>
+</html> 
+
+<!--<html>
+    <head>
+        <script>
+            console.log();
+        </script>
+    </head>
+    <body>
+        <p>Iam getting the data from the server</p>
+    </body>
+</html> -->
